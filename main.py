@@ -110,7 +110,7 @@ if __name__ == '__main__':
 #       }
 #   [3]
 #       {
-#           "price": 13789.01,
+#           "price": 13789.01,,
 #           "volume": 0.000761905,
 #           "error_code": "rejected",
 #           "error_msg": "filling trade in progress",
