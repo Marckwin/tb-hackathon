@@ -43,13 +43,15 @@ STREAM = CSVStream(
     expression=SELECT_ALL_QUERY,
 )
 
+
 @dataclass
 class Trade:
-    trade_type: str # BUY | SELL
+    trade_type: str  # BUY | SELL
     base: str
     volume: Decimal
 
-def algorithm(csv_row: str, context: dict[str, Any],):
+
+def algorithm(csv_row: str, context: dict[str, Any], ):
     """ Trading Algorithm
 
     Add your logic to this function. This function will simulate a streaming
@@ -69,9 +71,10 @@ def algorithm(csv_row: str, context: dict[str, Any],):
     """
     # algorithm logic...
 
-    response = yield None # example: Trade(BUY, 'xbt', Decimal(1))
+    response = yield None  # example: Trade(BUY, 'xbt', Decimal(1))
 
     # algorithm clean-up/error handling...
+
 
 if __name__ == '__main__':
     # example to stream data
