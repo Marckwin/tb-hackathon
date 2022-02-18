@@ -53,20 +53,16 @@ class Trade:
 
 def algorithm(csv_row: str, context: dict[str, Any], ):
     """ Trading Algorithm
-
     Add your logic to this function. This function will simulate a streaming
     interface with exchange trade data. This function will be called for each
     data row received from the stream.
-
     The context object will persist between iterations of your algorithm.
-
     Args:
         csv_row (str): one exchange trade (format: "exchange pair", "price", "volume", "timestamp")
         context (dict[str, Any]): a context that will survive each iteration of the algorithm
-
     Generator:
         response (dict): "Fill"-type object with information for the current and unfilled trades
-    
+
     Yield (None | Trade | [Trade]): a trade order/s; None indicates no trade action
     """
     # algorithm logic...
@@ -93,7 +89,7 @@ if __name__ == '__main__':
 #   [1] 1 unit xbt from trade 1 (%50 available volume from the trade data)
 #   [2] 1 unit xbt from trade 2
 #   [3] receiving trade 3, you decide to put in another BUY trade:
-#       i. Trade will be rejected, because we have not finished filling your 
+#       i. Trade will be rejected, because we have not finished filling your
 #          previous trade
 #       ii. The fill object will contain additional fields with error data
 #           a. "error_code", which will be "rejected"; and
