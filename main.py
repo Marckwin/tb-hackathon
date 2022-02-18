@@ -43,15 +43,13 @@ STREAM = CSVStream(
     expression=SELECT_ALL_QUERY,
 )
 
-
 @dataclass
 class Trade:
-    trade_type: str  # BUY | SELL
+    trade_type: str # BUY | SELL
     base: str
     volume: Decimal
 
-
-def algorithm(csv_row: str, context: dict[str, Any], ):
+def algorithm(csv_row: str, context: dict[str, Any],):
     """ Trading Algorithm
     Add your logic to this function. This function will simulate a streaming
     interface with exchange trade data. This function will be called for each
@@ -62,15 +60,14 @@ def algorithm(csv_row: str, context: dict[str, Any], ):
         context (dict[str, Any]): a context that will survive each iteration of the algorithm
     Generator:
         response (dict): "Fill"-type object with information for the current and unfilled trades
-
+    
     Yield (None | Trade | [Trade]): a trade order/s; None indicates no trade action
     """
     # algorithm logic...
 
-    response = yield None  # example: Trade(BUY, 'xbt', Decimal(1))
+    response = yield None # example: Trade(BUY, 'xbt', Decimal(1))
 
     # algorithm clean-up/error handling...
-
 
 if __name__ == '__main__':
     # example to stream data
@@ -89,7 +86,7 @@ if __name__ == '__main__':
 #   [1] 1 unit xbt from trade 1 (%50 available volume from the trade data)
 #   [2] 1 unit xbt from trade 2
 #   [3] receiving trade 3, you decide to put in another BUY trade:
-#       i. Trade will be rejected, because we have not finished filling your
+#       i. Trade will be rejected, because we have not finished filling your 
 #          previous trade
 #       ii. The fill object will contain additional fields with error data
 #           a. "error_code", which will be "rejected"; and
@@ -110,7 +107,7 @@ if __name__ == '__main__':
 #       }
 #   [3]
 #       {
-#           "price": 13789.01,,
+#           "price": 13789.01,
 #           "volume": 0.000761905,
 #           "error_code": "rejected",
 #           "error_msg": "filling trade in progress",
