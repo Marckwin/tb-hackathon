@@ -65,6 +65,13 @@ def algorithm(csv_row: str, context: dict[str, Any],):
     Add gridbot algo?
     """
     # algorithm logic...
+    price1 = price * .10
+    alg_buy = x/c
+    alg_sell = x*c
+    if price == alg:
+        response=yield Trade(BUY,coin, price1)
+    if price == alg2:
+        response=yield Trade(SELL,coin ,price1)
 
     response = yield None # example: Trade(BUY, 'xbt', Decimal(1))
 
