@@ -65,6 +65,9 @@ def algorithm(csv_row: str, context: dict[str, Any],):
     Add gridbot algo?
     """
     # algorithm logic...
+    x = price
+    c = 1.05 
+    
     price1 = price * .10
     alg_buy = x/c
     alg_sell = x*c
