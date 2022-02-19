@@ -62,6 +62,7 @@ def algorithm(csv_row: str, context: dict[str, Any],):
         response (dict): "Fill"-type object with information for the current and unfilled trades
     
     Yield (None | Trade | [Trade]): a trade order/s; None indicates no trade action
+    Add gridbot algo?
     """
     # algorithm logic...
 
