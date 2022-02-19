@@ -63,7 +63,9 @@ def algorithm(csv_row: str, context: dict[str, Any],):
     
     Yield (None | Trade | [Trade]): a trade order/s; None indicates no trade action
     Add gridbot algo?
-    """
+    step 1: wait for price to reach x*1.05 or x/1.05
+    step 2: buy/sell
+    step 3: make x equal price bought or sold at    """
     # algorithm logic...
     x = price
     c = 1.05 
