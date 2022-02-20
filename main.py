@@ -67,9 +67,9 @@ def algorithm(csv_row: str, context: dict[str, Any],):
     # algorithm logic...\
     bank = 1000000
     c = 1.05 
-    price1 = Decimal(1)
     
-    volume_price = bank * .10
+    volume_price = Decimal(bank * .10)
+    
     alg_buy = price_buy/c
     alg_sell = price_sell*c
     if price == alg_buy:
