@@ -69,6 +69,8 @@ def algorithm(csv_row: str, context: dict[str, Any],):
     c = 1.05 
     
     volume_price = Decimal(bank * .10)
+    price_buy = price
+    price_sell = price
     
     alg_buy = price_buy/c
     alg_sell = price_sell*c
