@@ -64,19 +64,23 @@ def algorithm(csv_row: str, context: dict[str, Any],):
     Yield (None | Trade | [Trade]): a trade order/s; None indicates no trade action
     Add gridbot algo?
     """
-    # algorithm logic...
+    # algorithm logic...\
+    bank = 1000000
     c = 1.05 
+    price1 = Decimal(1)
     
-    price1 = price * .10
+    volume_price = bank * .10
     alg_buy = price_buy/c
     alg_sell = price_sell*c
     if price == alg_buy:
-        response=yield Trade(BUY,coin, price1)
+        response=yield Trade(BUY,coin, volume_price)
         price_buy = price
+        bank -= price_buy
         
-    if price == alg_sell:
-        response=yield Trade(SELL,coin ,price1)
+    elif price == alg_sell and :
+        response=yield Trade(SELL,coin ,volume_price)
         price_sell = price
+        bank += price_sell
 
     response = yield None # example: Trade(BUY, 'xbt', Decimal(1))
 
