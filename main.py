@@ -73,14 +73,14 @@ def algorithm(csv_row: str, context: dict[str, Any],):
     alg_buy = price_buy/c
     alg_sell = price_sell*c
     if price == alg_buy:
-        response=yield Trade(BUY,coin, volume_price)
+        response=yield Trade(BUY,'xbt', volume_price)
         price_buy = price
-        bank -= price_buy
+        bank -= price_buy*volume_price
         
     elif price == alg_sell and :
-        response=yield Trade(SELL,coin ,volume_price)
+        response=yield Trade(SELL,'xbt', volume_price)
         price_sell = price
-        bank += price_sell
+        bank += price_sell*volume_price
 
     response = yield None # example: Trade(BUY, 'xbt', Decimal(1))
 
